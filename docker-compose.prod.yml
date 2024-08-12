@@ -13,8 +13,8 @@ services:
       - 3000:3000
     networks:
       - my_network
-    volumes:
-      - myapp:/app/public
+    #volumes:
+    #  - myapp:/app/public
 
   # Add more containers below (nginx, postgres, etc.)
 
@@ -24,6 +24,6 @@ networks:
   my_network:
     external: false
 
-volumes:
-  myapp:
-    external: false
+#volumes:
+#  myapp:
+#    external: false
