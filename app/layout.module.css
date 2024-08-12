@@ -1,0 +1,79 @@
+.sidebar {
+    position: fixed;
+    height: 100vh;
+    width: 160px;
+}
+
+.title {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+    color: rgb(16, 16, 16);
+    margin: 0 0 1.5rem 0;
+}
+
+.mobileTitle {
+    display: none;
+    font-size: 2rem;
+}
+
+.linkGroupTitle {
+    font-size: 0.7rem;
+    color: rgb(104, 104, 104);
+    margin-bottom: 0.3rem;
+}
+
+.projectsGroup {
+    margin-bottom: 2rem;
+}
+
+.otherGroup {
+    
+}
+
+.projectsGroupLink {
+    color: #181818;
+    margin-bottom: 0.2rem;
+}
+
+.otherGroupLink {
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+    color: rgb(104, 104, 104);
+    margin-bottom: 0.6rem;
+}
+
+.content {
+    margin-left: 160px;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 800px) {
+    .sidebar {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: none;
+    }
+    .content {
+        margin-left: unset;
+        margin-top: 5rem;
+    }
+    .title {
+        display: none;
+    }
+    .linkGroupTitle {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .projectsGroupLink {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .otherGroupLink {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
