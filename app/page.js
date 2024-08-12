@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <Image
-          src={`/images/main.png`}
+          src={`/cover.png`}
           width={800}
           height={800}
           alt="main image"

@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className={styles.content}>
       <Image
-          src="/images/me.png"
+          src="/me.png"
           width={500}
           height={500}
           alt="Me"

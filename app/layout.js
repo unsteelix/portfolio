@@ -5,7 +5,7 @@ import styles from "./layout.module.css";
 import data from '../public/data';
 import MobileMenu from "./mobileMenu";
 
-const galleries = Object.keys(data.galleries);
+const galleries = Object.entries(data.galleries);
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
           <figure className={styles.projectsGroup}>
             <figcaption className={styles.linkGroupTitle}>Projects</figcaption>
             {galleries.map((e, i) => (
-              <div key={i} className={styles.projectsGroupLink}><Link href={`/gallery/${e}`}>&nbsp;&nbsp;{`${e}`}</Link></div>
+              <div key={i} className={styles.projectsGroupLink}><Link href={`/gallery/${e[0]}`}>&nbsp;&nbsp;{`${e[1].name}`}</Link></div>
             ))} 
           </figure>
           <figure className={styles.otherGroup}>

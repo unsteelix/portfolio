@@ -5,7 +5,7 @@ import styles from "./mobileMenu.module.css";
 import Link from 'next/link';
 import data from '../public/data';
 
-const galleries = Object.keys(data.galleries);
+const galleries = Object.entries(data.galleries);
 
 export default function MobileMenu() {
   let [isVisible, setVisible] = useState(false)
@@ -22,7 +22,7 @@ export default function MobileMenu() {
                     <figure className={styles.projectsGroup}>
                     <figcaption className={styles.linkGroupTitle}>Projects</figcaption>
                     {galleries.map((e, i) => (
-                        <div key={i} className={styles.projectsGroupLink} onClick={menuBtn}><Link href={`/gallery/${e}`}>&nbsp;&nbsp;{`${e}`}</Link></div>
+                        <div key={i} className={styles.projectsGroupLink} onClick={menuBtn}><Link href={`/gallery/${e[0]}`}>&nbsp;&nbsp;{`${e[1].name}`}</Link></div>
                     ))} 
                     </figure>
                     <figure className={styles.otherGroup}>
@@ -33,7 +33,9 @@ export default function MobileMenu() {
                 </nav>
             </div>
         <div className={styles.mobileMenuTitle}>
-            <div className={styles.mobileTitle}>Kirill Orekhov</div>
+            <div className={styles.mobileTitle}>
+              <Link href="/">Kirill Orekhov</Link>
+            </div>
             <div className={styles.menuBtn} onClick={menuBtn}>menu</div>
         </div>
     </div>
